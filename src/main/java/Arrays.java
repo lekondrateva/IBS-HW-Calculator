@@ -20,6 +20,7 @@ public class Arrays {
             }
         }
         System.out.println("Самое длинное слово в массиве: " + myArray[index] + " элемент массива № " + (index + 1));
+        in.close();
     }
 
     public static int[] fillArrayRandomly() {

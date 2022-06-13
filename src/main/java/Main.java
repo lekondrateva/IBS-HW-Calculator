@@ -43,5 +43,6 @@ public class Main {
             weightSum += someSweets.getWeight();
         }
         System.out.printf("Стоимость подарка: %.2f \nВес подарка: %d", priceSum, weightSum);
+        in.close();
     }
 }
