@@ -20,20 +20,29 @@ public class Main {
         } else if (task == 2) {
             Arrays.findTheLongestElement();
         } else System.out.println("Не удается распознать номер задачи, допустимы значения 1 или 2");
-            // Задание №3 - Массив
+        in.close();
+        // Задание №3 - Массив
         Arrays.findMaxMinAndReplace(Arrays.fillArrayRandomly());
-            // Задание №3 - Сладкий подарок
-        Candy candy1 = new Candy("Mars", 20.5, 50);
+        // Задание №3 - Сладкий подарок
+        Candy candy1 = new Candy("Mars", 20.5, 50, "Belgium");
         Candy candy2 = new Candy();
-        candy2.setWeight(40);
+        candy2.setCountry("USA");
         candy2.setPrice(10.1);
         candy2.setBrand("Skittles");
-        Jellybean jellybean1 = new Jellybean("Oreo", 65.6, 105);
+        candy2.setWeight(30);
+        Jellybean jellybean1 = new Jellybean("Oreo", 65.6, 105, "Apple");
         Jellybean jellybean2 = new Jellybean();
         jellybean2.setWeight(30);
         jellybean2.setBrand("M&Ms");
         jellybean2.setPrice(10.5);
-        Sweets[] box = {candy1, candy2, jellybean1, jellybean2};
+        jellybean2.setTaste("Lemon");
+        Cake cake1 = new Cake("Mirrel", 100.20, 700, 400);
+        Cake cake2 = new Cake();
+        cake2.setWeight(400);
+        cake2.setBrand("AlpenGold");
+        cake2.setPrice(70.63);
+        cake2.setCcal(352);
+        Sweets[] box = {candy1, candy2, jellybean1, jellybean2, cake1, cake2};
         System.out.println("В подарке собрано: ");
         double priceSum = 0;
         int weightSum = 0;
@@ -43,6 +52,5 @@ public class Main {
             weightSum += someSweets.getWeight();
         }
         System.out.printf("Стоимость подарка: %.2f \nВес подарка: %d", priceSum, weightSum);
-        in.close();
     }
 }
